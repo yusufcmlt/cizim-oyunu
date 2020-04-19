@@ -77,14 +77,20 @@ export class CizimAlani extends Component {
     if (this.props.redirectToAna) {
       return (
         <Redirect
-          to={{ pathname: "/", state: { siteDili: this.props.siteDili } }}
+          to={{
+            pathname: process.env.PUBLIC_URL + "/",
+            state: { siteDili: this.props.siteDili },
+          }}
         />
       );
     }
     if (this.props.redirectToHata) {
       return (
         <Redirect
-          to={{ pathname: "/404", state: { siteDili: this.props.siteDili } }}
+          to={{
+            pathname: process.env.PUBLIC_URL + "/404",
+            state: { siteDili: this.props.siteDili },
+          }}
         />
       );
     }

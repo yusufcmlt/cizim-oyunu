@@ -19,12 +19,24 @@ import OyunBitis from "./sayfalar/OyunBitis";
 function App() {
   return (
     <Router>
-      <Route exact path="/" component={AnaSayfa} />
-      <Route path="/oyuna-katil" component={OyunaKatil} />
-      <Route path="/oyun-olustur" component={LobiSayfasi} />
-      <Route path="/oyun-sayfasi" component={OyunSayfasi} />
-      <Route path="/oyun-bitis" component={OyunBitis} />
-      <Route path="/404" component={HataSayfasi} />
+      <Route exact path={process.env.PUBLIC_URL + "/"} component={AnaSayfa} />
+      <Route
+        path={process.env.PUBLIC_URL + "/oyuna-katil"}
+        component={OyunaKatil}
+      />
+      <Route
+        path={process.env.PUBLIC_URL + "/oyun-olustur"}
+        component={LobiSayfasi}
+      />
+      <Route
+        path={process.env.PUBLIC_URL + "/oyun-sayfasi"}
+        component={OyunSayfasi}
+      />
+      <Route
+        path={process.env.PUBLIC_URL + "/oyun-bitis"}
+        component={OyunBitis}
+      />
+      <Route path={process.env.PUBLIC_URL + "/404"} component={HataSayfasi} />
     </Router>
   );
 }

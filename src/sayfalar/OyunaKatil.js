@@ -149,7 +149,7 @@ export default function OyunaKatil(props) {
     return (
       <Redirect
         to={{
-          pathname: `/oyun-olustur`,
+          pathname: process.env.PUBLIC_URL + "/oyun-olustur`=",
           state: {
             oda: oda,
             isim: isim,
@@ -168,7 +168,7 @@ export default function OyunaKatil(props) {
     <div id="oyunakatil-dis-container" className="bg-warning">
       <div id="oyunakatil-ic-container">
         <a
-          href="/"
+          href={process.env.PUBLIC_URL + "/"}
           id="oyunakatil-logo-container"
           className="text-center anasayfaBaslik rounded-lg"
         >

@@ -87,7 +87,7 @@ export default function OyunSayfasi(props) {
       setKelimeGoster(kelimeGosterDurumu)
     );
     socket.on("siraDegistir", (siraData) => {
-      console.log(`Sira:${siraData} oyuncusunda.`);
+      //console.log(`Sira:${siraData} oyuncusunda.`);
       setSira(siraData);
     });
 
@@ -164,7 +164,7 @@ export default function OyunSayfasi(props) {
     return (
       <Redirect
         to={{
-          pathname: "/oyun-bitis",
+          pathname: process.env.PUBLIC_URL + "/oyun-bitis",
           state: {
             oda: oda,
             kullanicilar: kullanicilar,

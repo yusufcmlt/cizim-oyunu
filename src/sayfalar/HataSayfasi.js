@@ -20,7 +20,14 @@ export default function HataSayfasi(props) {
   //Ana sayfaya yonlendirilme durumu.
   if (anasayfaYonlendir) {
     socket.disconnect();
-    return <Redirect to={{ pathname: "/", state: { siteDili: siteDili } }} />;
+    return (
+      <Redirect
+        to={{
+          pathname: process.env.PUBLIC_URL + "/",
+          state: { siteDili: siteDili },
+        }}
+      />
+    );
   }
   return (
     <div className="container-fluid d-flex vh-100 align-items-center  justify-content-center bg-warning">

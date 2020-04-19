@@ -101,7 +101,7 @@ export default function LobiSayfasi(props) {
       setOyunDili(oyunTurSure.child("dil").val());
 
       if (!odaKurucusu) {
-        console.log(oyunTurSure.child("oyunIzin").val());
+        //console.log(oyunTurSure.child("oyunIzin").val());
         setOyunIzin(oyunTurSure.child("oyunIzin").val());
       }
     });
@@ -142,7 +142,7 @@ export default function LobiSayfasi(props) {
         setTimeout(function () {
           dataRef.once("value", (snapshot) => {
             if (!snapshot.child(oda).child("oyuncuListesi").exists()) {
-              console.log(snapshot.child(oda).child("oyuncuListesi").val());
+              //console.log(snapshot.child(oda).child("oyuncuListesi").val());
               setRedirectAna(true);
             }
           });
@@ -195,7 +195,7 @@ export default function LobiSayfasi(props) {
     return (
       <Redirect
         to={{
-          pathname: "/oyun-sayfasi",
+          pathname: process.env.PUBLIC_URL + "/oyun-sayfasi",
           state: {
             oda: oda,
             isim: isim,
@@ -215,7 +215,12 @@ export default function LobiSayfasi(props) {
   //Redirect stateinin kontrolu ve 404 sayfasina yonlendirme durumu
   if (redirectToAna) {
     return (
-      <Redirect to={{ pathname: "/404", state: { siteDili: siteDili } }} />
+      <Redirect
+        to={{
+          pathname: process.env.PUBLIC_URL + "/404",
+          state: { siteDili: siteDili },
+        }}
+      />
     );
   }
   return (
@@ -223,7 +228,7 @@ export default function LobiSayfasi(props) {
       <div id="lobisayfasi-ic-container">
         <a
           id="lobisayfasi-logo-container"
-          href="/"
+          href={process.env.PUBLIC_URL + "/"}
           className="col text-center col-lg-7 anasayfaBaslik rounded-lg text-wrap"
         >
           <h1>Çizim Tahmin Oyunu</h1>

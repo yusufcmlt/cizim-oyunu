@@ -65,7 +65,7 @@ export default function OyunBitis(props) {
     return (
       <Redirect
         to={{
-          pathname: "/",
+          pathname: process.env.PUBLIC_URL + "/",
           state: {
             siteDili: siteDili,
           },

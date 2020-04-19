@@ -47,7 +47,7 @@ export default function AnaSayfa(props) {
     return (
       <Redirect
         to={{
-          pathname: "/oyun-olustur",
+          pathname: process.env.PUBLIC_URL + "/oyun-olustur",
           state: {
             oda: oda,
             isim: isim,
@@ -70,7 +70,7 @@ export default function AnaSayfa(props) {
         <div id="anasayfa-ic-container">
           <div id="anasayfa-login-alan-container">
             <a
-              href="/"
+              href={process.env.PUBLIC_URL + "/"}
               id="anasayfa-logo-container"
               className="text-center anasayfaBaslik rounded-lg"
             >
@@ -113,7 +113,7 @@ export default function AnaSayfa(props) {
                 //Bu isim diger sayfaya yollanir.
                 id="oyunakatil-button-link"
                 to={{
-                  pathname: "/oyuna-katil",
+                  pathname: process.env.PUBLIC_URL + "/oyuna-katil",
                   state: { isim: isim, siteDili: siteDili },
                 }}
               >
