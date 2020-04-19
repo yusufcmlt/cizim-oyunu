@@ -149,7 +149,7 @@ export default function OyunaKatil(props) {
     return (
       <Redirect
         to={{
-          pathname: process.env.PUBLIC_URL + "/oyun-olustur`=",
+          pathname: process.env.PUBLIC_URL + "/oyun-olustur",
           state: {
             oda: oda,
             isim: isim,
