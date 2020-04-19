@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap");
+* {
+  font-family: "Lexend Exa", sans-serif;
+}
+.App {
+  text-align: center;
+}
+
+.anasayfaBaslik {
+  background-color: rgba(0, 0, 0, 1);
+  color: rgb(241, 170, 16);
+  transition: 0.5s;
+  text-decoration: none;
+  box-shadow: -3px 3px 0px 0px rgb(100, 100, 100);
+}
+.anasayfaBaslik:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgba(241, 170, 16, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 4px 3px 0px 0px rgba(51, 48, 51, 1);
+}

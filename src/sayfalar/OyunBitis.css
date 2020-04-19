@@ -1,0 +1,39 @@
+#oyun-bitis-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  background-color: #ffc107;
+  grid-template-rows: 2fr 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+}
+#oyun-bitti-text {
+  text-align: center;
+}
+#siralama-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  font-size: 20px;
+  row-gap: 5px;
+}
+#kullanici-puan-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  padding: 5px;
+  width: 500px;
+  -webkit-box-shadow: -1px 2px 0px 0px rgba(51, 48, 51, 1);
+  -moz-box-shadow: -1px 2px 0px 0px rgba(51, 48, 51, 1);
+  box-shadow: -1px 2px 0px 0px rgba(51, 48, 51, 1);
+}
+
+#yonlendirme-text {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #kullanici-puan-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    padding: 5px;
+    width: 340px;
+  }
+}

@@ -1,0 +1,38 @@
+#oyunculistesi-dis-container {
+  width: 400px;
+}
+#oyunculistesi-ic-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 5px;
+}
+#oyunculistesi-oyuncu-container {
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition-duration: 0.1s;
+  -webkit-box-shadow: -3px 1px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -3px 1px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -3px 1px 0px 0px rgba(0, 0, 0, 0.75);
+}
+#oyunculistesi-oyuncu-container:hover {
+  -webkit-box-shadow: 3px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  color: rgb(0, 0, 0);
+}
+#oyunculistesi-isim {
+  text-align: center;
+}
+#oyunculistesi-puan {
+  text-align: end;
+}
+@media screen and (max-width: 1400px) {
+  #oyunculistesi-dis-container {
+    width: 400px;
+  }
+}

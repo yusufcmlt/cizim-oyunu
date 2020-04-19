@@ -1,0 +1,133 @@
+#anasayfa-dis-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+#anasayfa-ic-container {
+  width: 1000px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 2fr 0.1fr 2fr;
+}
+#nasil-oynanir-button {
+  border: none;
+  background: none;
+  transition-duration: 0.2s;
+  box-shadow: -2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  background-color: rgba(252, 249, 249, 0.527);
+}
+#nasil-oynanir-button:hover {
+  color: rgb(40, 28, 107);
+}
+#nasil-oynanir-button:active {
+  color: rgb(160, 108, 11);
+  background-color: rgba(80, 78, 78, 0.637);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  color: white;
+}
+#anasayfa-cizim-alan-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  color: #1d1a46;
+}
+#cizim-alani-anasayfa {
+  margin-top: 20px;
+  cursor: crosshair;
+  height: 350px;
+  width: 400px;
+  -webkit-box-shadow: -3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -3px 4px 0px 0px rgba(0, 0, 0, 0.75);
+}
+#nasil-oynanir-container {
+  margin-top: 20px;
+  height: 350px;
+  width: 440px;
+  text-align: left;
+}
+#nasil-oynanir-container > p {
+  background-color: rgba(252, 249, 249, 0.527);
+  padding: 5px;
+  -webkit-box-shadow: -2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+#nasil-oynanir-container > p:hover {
+  color: white;
+  background-color: rgba(80, 78, 78, 0.637);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+}
+#anasayfa-border-alan-container {
+  height: 100%;
+  width: 5%;
+  background-color: rgba(128, 128, 128, 0.26);
+}
+
+#anasayfa-login-alan-container {
+  display: grid;
+  grid-template-rows: 1fr 0.4fr 0.3fr 0.5fr 0.5fr;
+  justify-items: center;
+}
+#anasayfa-logo-container {
+  margin-top: 100px;
+  width: 400px;
+  height: 100px;
+}
+#anasayfa-oyuncuadi-container {
+  text-align: center;
+  width: 70%;
+}
+#anasayfa-oyunolustur-container {
+  width: 70%;
+}
+#anasayfa-oyunakatil-container {
+  width: 70%;
+}
+#oyunakatil-button-link {
+  text-decoration: none;
+}
+#question-mark-link {
+  display: grid;
+  justify-items: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+#question-mark-link > a {
+  color: #634e0f;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+#question-mark-link > a:hover {
+  font-size: 30px;
+  color: rgba(46, 14, 224);
+}
+.anasayfa-loader {
+  border: 7px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 7px solid #000000;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1400px) {
+  #anasayfa-ic-container {
+    transform: scale(0.75);
+  }
+}
