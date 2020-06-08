@@ -6,7 +6,13 @@ import { socket } from "../oyun-ogeleri/socketExport";
 const CIZIM_X = 600;
 const CIZIM_Y = 500;
 let mousePositionMultiplier =
-  window.innerWidth < 1400 ? 0.75 : window.innerWidth < 1600 ? 0.85 : 1;
+  window.innerWidth < 768
+    ? 0.6
+    : window.innerWidth < 1400
+    ? 0.75
+    : window.innerWidth < 1600
+    ? 0.85
+    : 1;
 export class CizimAlani extends Component {
   setup = (p5, parent) => {
     if (!this.props.redirectToAna) {

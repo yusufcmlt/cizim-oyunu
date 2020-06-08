@@ -5,12 +5,11 @@
 
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
-import firebase from "firebase";
+import firebase from "firebase/app";
 import randomLinkGetir from "../oyun-ogeleri/RastgeleLink";
 import randomSayiOlustur from "../oyun-ogeleri/RastgeleSayi";
 import "./OyunaKatil.css";
 const siteDiliJson = require("../oyun-ogeleri/oyun-dil.json");
-//import { socket } from "../oyun-ogeleri/socketExport";
 
 export default function OyunaKatil(props) {
   const LOCATION_REF = props.location.state;
@@ -48,7 +47,6 @@ export default function OyunaKatil(props) {
       let odaIndex = snapshotKeys.findIndex((odaGir) => odaGir === oda);
       //Oda ismi bos birakilmis veya listede bulunmuyorsa->
       if (girilenOda === "girilmemis-oda" || odaIndex === -1) {
-        //gelenEvent.preventDefault();
         setYokMessage(true);
         setTimeout(function () {
           setYokMessage(false);
@@ -61,7 +59,6 @@ export default function OyunaKatil(props) {
         Object.keys(snapshot.child(girilenOda).child("oyuncuListesi").val())
           .length >= 7
       ) {
-        //gelenEvent.preventDefault();
         setYokMessage(true);
         setTimeout(function () {
           setYokMessage(false);
@@ -101,15 +98,6 @@ export default function OyunaKatil(props) {
               let odaOyuncuSayisi = odaKontrol.child("oyuncuListesi").exists()
                 ? Object.keys(odaKontrol.child("oyuncuListesi").val()).length
                 : 0;
-              // console.log(
-              //   `Oda:${odaListesi[randomOdaIndex]}\nDil:${odaKontrol
-              //     .child("dil")
-              //     .val()}\nOyun basladi:${odaKontrol
-              //     .child("oyunBasladi")
-              //     .val()}\nOyun Acik:${odaKontrol
-              //     .child("oyunIzin")
-              //     .val()}\nOyuncu Sayisi:${odaOyuncuSayisi}`
-              // );
               if (
                 odaKontrol.child("dil").val() === rastgeleDili &&
                 !odaKontrol.child("oyunBasladi").val() &&
@@ -172,7 +160,7 @@ export default function OyunaKatil(props) {
           id="oyunakatil-logo-container"
           className="text-center anasayfaBaslik rounded-lg"
         >
-          <p className="h1">Çizim Tahmin Oyunu</p>
+          <p className="h1">{SITE_DIL["site_logo"]}</p>
         </a>
         <div id="oyunakatil-input-container">
           <label htmlFor="oda-linki-katil">{SITE_DIL["game_key"]}</label>
@@ -198,7 +186,7 @@ export default function OyunaKatil(props) {
           <button
             id="katil-linki"
             type="button"
-            className="btn-lg btn-success"
+            className="btn-lg btnoyun-renkfirst"
             onClick={(event) => {
               odaKontrolu(oda);
             }}
@@ -230,7 +218,7 @@ export default function OyunaKatil(props) {
           <button
             id="katil-linki-random"
             type="button"
-            className="btn-lg text-light"
+            className="btn-lg btn-block btnoyun-renksecond"
             onClick={randomOyunBul}
           >
             {SITE_DIL["random_game_button"]}

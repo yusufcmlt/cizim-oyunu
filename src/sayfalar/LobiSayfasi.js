@@ -10,7 +10,7 @@
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import linkiKopyala from "../oyun-ogeleri/LinkKopyala";
-import firebase from "firebase";
+import firebase from "firebase/app";
 import OyuncuListesi from "./OyuncuListesi";
 import { socket } from "../oyun-ogeleri/socketExport";
 import OptionOlusturucu from "../oyun-ogeleri/OptionOlusturucu";
@@ -105,24 +105,7 @@ export default function LobiSayfasi(props) {
         setOyunIzin(oyunTurSure.child("oyunIzin").val());
       }
     });
-    //Oda kurucusu secilen oyuncu disinda oyun ayarlarinin degistirilmesinin engellenmesi.
-    //Ayar seceneklerinin id listesi
-    // let oyunAyarSecenekleri = [
-    //   "dil-secimi-lobi",
-    //   "sure-secimi-lobi",
-    //   "tur-secimi-lobi",
-    //   "oyunu-baslat-button"
-    // ];
-    //odaKurucusu durumuna gore seceneklerin engellenebilir veya erisilebilir duruma getirilmesi.
-    //Baslatma seceneginin erisilebilir olmasi icin lobide 1 den fazla oyuncu olmasi gerekmektedir.
-    // oyunAyarSecenekleri.forEach(ayar => {
-    //   if (document.getElementById(ayar) !== null) {
-    //     document.getElementById(ayar).disabled = !odaKurucusu;
-    //     if (kullanicilar.length <= 1) {
-    //       document.getElementById("oyunu-baslat-button").disabled = true;
-    //     }
-    //   }
-    // });
+
     //Sayfadan cikis durumu.
     return () => {
       dataRef.off();
@@ -231,7 +214,7 @@ export default function LobiSayfasi(props) {
           href={process.env.PUBLIC_URL + "/"}
           className="col text-center col-lg-7 anasayfaBaslik rounded-lg text-wrap"
         >
-          <h1>Çizim Tahmin Oyunu</h1>
+          <h1>{SITE_DIL["site_logo"]}</h1>
         </a>
         <div id="lobisayfasi-key-container">
           <input
@@ -307,7 +290,7 @@ export default function LobiSayfasi(props) {
                   type="button"
                   disabled={!odaKurucusu}
                   className={`btn-sm ${
-                    oyunIzin ? "btn-success" : "btn-danger"
+                    oyunIzin ? "btn-primary" : "btn-danger"
                   }`}
                   onClick={() => {
                     handleOyunIzin();
@@ -325,7 +308,7 @@ export default function LobiSayfasi(props) {
                 disabled={odaKurucusu && kullanicilar.length > 1 ? false : true}
                 className={
                   odaKurucusu && kullanicilar.length > 1
-                    ? "btn-sm shadow btn-success"
+                    ? "btn-sm shadow btn-primary"
                     : "btn-sm shadow btn-secondary text-dark"
                 }
                 onClick={(event) => odayiYonlendir()}

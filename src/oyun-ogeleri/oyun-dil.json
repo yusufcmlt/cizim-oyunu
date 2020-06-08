@@ -1,10 +1,12 @@
 {
   "oyun-dil_tr": {
+    "site_logo": "Çizimi Bul!",
     "player": "Oyuncu",
     "player_name": "Oyuncu Adı",
     "create_a_game": "Oyun Oluştur",
     "join_a_game": "Oyuna Katıl",
-    "how_to_play": "Nasıl Oynanır",
+    "how_to_play": "Nasıl Oynanır?",
+    "click_button": "Üstteki butona tıklayabilirsin",
     "how_to_play_1": "· Arkadaşlarınla oynamak için bir lobi oluşturabilir veya bir lobiye katılabilirsin.(En fazla 7)",
     "how_to_play_2": "· Sıran geldiğinde rastgele seçilen bir kelimeyi çizerek tarif etmeye çalışırsın.",
     "how_to_play_3": "· Sıradaki kelimeyi çizmeye çalışırken diğer oyuncular da kelimeyi tahmin etmeye çalışır.",
@@ -13,7 +15,7 @@
 
     "copy_button_not_copied": "Kopyala",
     "copy_button_copied": "Kopyalandı",
-    "game_settings": "Oyun Ayaları",
+    "game_settings": "Oyun Ayarları",
     "game_settings_language": "Dil",
     "game_settings_seconds": "Süre(Saniye)",
     "game_settings_round": "Tur Sayısı",
@@ -54,19 +56,21 @@
     "wrong_page_message": "Burada görecek bir şey yok..."
   },
   "oyun-dil_eng": {
+    "site_logo": "Guess The Drawing!",
     "player": "Player",
     "player_name": "Player Name",
     "create_a_game": "Create A Game",
     "join_a_game": "Join A Game",
-    "how_to_play": "How To Play",
+    "how_to_play": "How To Play?",
+    "click_button": "You can click the button above",
     "how_to_play_1": "· You can create or join a game to play with your friends.(Up to 7)",
     "how_to_play_2": "· Players try to draw a random word that they get on their turn.",
     "how_to_play_3": "· While you are trying to draw, others try to guess the word that you are drawing.",
     "how_to_play_4": "· Drawers get points by players who guessed the word and players get points by guessing the word you are drawing.",
     "how_to_play_5": "· Earlier the guess,more points you get for both sides.",
 
-    "copy_button_not_copied": "Copy Key",
-    "copy_button_copied": "Key Copied",
+    "copy_button_not_copied": "Copy",
+    "copy_button_copied": "Copied",
     "game_settings": "Game Settings",
     "game_settings_language": "Language",
     "game_settings_seconds": "Duration(Seconds)",

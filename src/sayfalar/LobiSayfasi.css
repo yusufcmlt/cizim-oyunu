@@ -21,10 +21,11 @@
   margin-top: 10px;
 }
 #lobisayfasi-key-container {
+  width: 380px;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   justify-items: center;
-  column-gap: 20px;
+  column-gap: 15px;
 }
 #lobisayfasi-key-text {
   height: 40px;
@@ -81,13 +82,28 @@
   grid-template-rows: 0.1fr 1fr;
   justify-items: center;
 }
-@media screen and (min-width: 1400px) {
-  #lobisayfasi-ic-container {
-    transform: scale(1.1);
-  }
-}
+
 @media screen and (max-width: 1400px) {
   #lobisayfasi-ic-container {
     transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 768px) {
+  #lobisayfasi-ic-container {
+    width: 100vw;
+    margin-left: -20px;
+    transform: scale(0.75);
+  }
+  #lobisayfasi-key-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #lobisayfasi-ayar-oyuncu-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.1fr 1fr;
+  }
+  #lobisayfasi-border-container {
+    width: 90%;
+    height: 2px;
   }
 }

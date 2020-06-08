@@ -74,7 +74,7 @@ export default function AnaSayfa(props) {
               id="anasayfa-logo-container"
               className="text-center anasayfaBaslik rounded-lg"
             >
-              <p className="h1">Çizim Tahmin Oyunu</p>
+              <p className="h1">{SITE_DIL["site_logo"]}</p>
             </a>
             <div id="anasayfa-oyuncuadi-container">
               <label htmlFor="oyuncu-adi-input" className="text-muted">
@@ -95,7 +95,7 @@ export default function AnaSayfa(props) {
                 //Tiklandiginda oda lobisinin olusturulmasi
                 //Oda sadece oyuna katilma alanindan erisilebilir.
                 //Oyuna giris icin oyun anahtarina ihtiyac vardir.
-                className="btn-lg btn-success btn-block"
+                className="btn-lg btnoyun-renkfirst btn-block "
                 onClick={(event) => {
                   setLoaderToggle(true);
                   setTimeout(function () {
@@ -118,18 +118,29 @@ export default function AnaSayfa(props) {
                 }}
               >
                 <button
-                  className="btn-lg btn-danger
+                  className="btn-lg btnoyun-renksecond
               btn-block"
                 >
                   {SITE_DIL["join_a_game"]}
                 </button>
               </Link>
             </div>
+            <button
+              id="site-language-button"
+              type="button"
+              onClick={() => {
+                setSiteDili(siteDili !== "tr" ? "tr" : "eng");
+              }}
+              className="btn-sm btnoyun-renkthird"
+            >
+              {siteDili === "tr" ? "English" : "Turkce"}
+            </button>
             <div id="question-mark-link">
               <a
-                rel="noopener noreferrer"
-                href="https://i.pinimg.com/736x/f0/02/fa/f002fa7b015cb00f85fe90c51154b57d.jpg"
-                target="_blank"
+                href="#anasayfa-cizim-alan-container"
+                onClick={() => {
+                  handleNasilToggle();
+                }}
               >
                 ?
               </a>
@@ -161,15 +172,6 @@ export default function AnaSayfa(props) {
                 </div>
               )}
             </div>
-            <button
-              type="button"
-              onClick={() => {
-                setSiteDili(siteDili !== "tr" ? "tr" : "eng");
-              }}
-              className="btn-sm btn-success"
-            >
-              {siteDili === "tr" ? "English" : "Turkce"}
-            </button>
           </div>
         </div>
       )}

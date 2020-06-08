@@ -36,17 +36,6 @@
   cursor: pointer;
   box-shadow: 3px 3px 0px 0px rgba(51, 48, 51, 1);
 }
-#info-container {
-  border-radius: 10px;
-  width: 200px;
-  padding: 10px;
-  height: 75px;
-}
-.info-context {
-  font-size: 18px;
-  text-align: start;
-  padding: 5px;
-}
 
 #last-message-container {
   border-radius: 10px;
@@ -184,18 +173,80 @@
   column-gap: 20px;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1600px) and (min-width: 1401px) {
   #oyun-ic-container {
     transform: scale(0.85);
     margin-top: -50px;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) and (min-width: 769px) {
   #oyun-ic-container {
     transform: scale(0.75);
     margin-top: -50px;
   }
   #border-container {
     width: 1.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #oyun-ic-container {
+    margin-top: 0px;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+  #oyun-cizim-liste-container {
+    margin-left: -70px;
+  }
+  #cizim-alani-container {
+    transform: scale(0.6);
+    width: 100%;
+  }
+  #cizim-container {
+    width: 100vw;
+  }
+
+  #oyuncular-container,
+  #border-container {
+    display: none;
+  }
+
+  #oyun-kelime-cevap-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  #oyun-timer-info-container,
+  #kelime-container,
+  #button-cevap-oyun,
+  #cevap-form-container {
+    width: 96vw;
+  }
+  #last-message-container {
+    width: 67vw;
+  }
+  #empty-div-cevap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 0px;
+  }
+  #oyun-cikis-button,
+  #timer-container {
+    width: 110%;
+  }
+  .renk-button {
+    width: 24vw;
+  }
+  #kelime-gosterme-oyun {
+    width: 100vw;
+    margin-left: 50px;
+  }
+  #kelime-bilgisi-oyun {
+    transform: scale(0.6);
+  }
+  #defaultCanvas0 {
+    background-color: white;
   }
 }

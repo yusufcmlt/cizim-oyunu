@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { socket } from "../oyun-ogeleri/socketExport";
+import "./HataSayfasi.css";
 const siteDiliJson = require("../oyun-ogeleri/oyun-dil.json");
 
 export default function HataSayfasi(props) {
@@ -32,9 +33,7 @@ export default function HataSayfasi(props) {
   return (
     <div className="container-fluid d-flex vh-100 align-items-center  justify-content-center bg-warning">
       <div id="hata-container" className="my-auto text-center">
-        <p id="hata-baslik" style={{ fontSize: "150px" }}>
-          ( ͡° ͜ʖ ͡°)
-        </p>
+        <p id="hata-baslik">( ͡° ͜ʖ ͡°)</p>
         <p id="hata-aciklama-mesaj" className="h5">
           {SITE_DIL["wrong_page_message"]}
         </p>

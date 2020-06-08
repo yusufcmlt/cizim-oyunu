@@ -1,0 +1,12 @@
+#hata-baslik {
+  font-size: 150px;
+}
+@media screen and (max-width: 768px) {
+  #hata-container {
+    transform: scale(0.75);
+  }
+
+  #hata-baslik {
+    font-size: 75px;
+  }
+}

@@ -13,7 +13,7 @@ import OyuncuListesi from "./OyuncuListesi";
 import KelimeContainer from "./KelimeContainer";
 import Timer from "./Timer";
 import { socket } from "../oyun-ogeleri/socketExport";
-import firebase from "firebase";
+import firebase from "firebase/app";
 const siteDiliJson = require("../oyun-ogeleri/oyun-dil.json");
 
 export default function OyunSayfasi(props) {

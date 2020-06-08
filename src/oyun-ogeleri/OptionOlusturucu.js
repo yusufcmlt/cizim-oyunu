@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import firebase from "firebase";
+import firebase from "firebase/app";
 
 //Lobideki sure ve tur ayarlarinin veritabanina yazimi ve
 //diger uyelerde gosteriminden sorumlu component.

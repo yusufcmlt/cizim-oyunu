@@ -1,14 +1,16 @@
-//Cizim oyunu baslangic sayfasi
-//2019-2020
-//Yusuf Cemal Tokmak
-//Bu oyunun arayuzu React ile tasarlanmaya calisilmistir.
-//Bu component ana uygulama elemanidir. Diger componentlerin kullanimi ve gecisi bu elemana baglidir.
+/**
+ * Cizim oyunu baslangic sayfasi:
+ * 2019-2020
+ * Bu oyun React JS ile tasarlanmaya calisilmistir.
+ * Bu component ana uygulama elemanidir. Diger componentlerin kullanimi ve gecisi bu elemana baglidir
+ */
 
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import "./sayfalar/OyunSayfasi.css";
 import "./sayfalar/OyunBitis.css";
+
 import AnaSayfa from "./sayfalar/AnaSayfa.js";
 import OyunaKatil from "./sayfalar/OyunaKatil.js";
 import LobiSayfasi from "./sayfalar/LobiSayfasi.js";

@@ -1,12 +1,21 @@
+/**
+ * Anasayfadaki cizim alani:
+ * Herhangi bir amaci yok deneme amacli eklendi
+ */
+
 import React, { Component } from "react";
 import Sketch from "react-p5";
 
-const CIZIM_X = 400;
-const CIZIM_Y = 350;
+const CIZIM_X = window.innerWidth < 768 ? 350 : 400;
+const CIZIM_Y = window.innerWidth < 768 ? 300 : 350;
 let cizimWeight = 1;
 let cizimIncrease = true;
 let renkSirasi = 0;
-let mousePositionMultiplier = window.innerWidth < 1400 ? 0.75 : 1;
+
+//Ekranin kuculme durumuna gore mouse pozisyonunda cizim.
+//Cizim alani scale edildiginden pozisyon farkinin ayarlanmasi
+let mousePositionMultiplier =
+  window.innerWidth < 1400 ? (window.innerWidth < 768 ? 0.8 : 0.75) : 1;
 export class CizimAlani extends Component {
   setup = (p5, parent) => {
     p5.createCanvas(CIZIM_X, CIZIM_Y).parent(parent);
@@ -24,14 +33,14 @@ export class CizimAlani extends Component {
       [140, 52, 235],
       [183, 52, 235],
     ];
-
+    //Cizimi sadece beyaz alan uzerinde gerceklestirme
     if (
       p5.mouseX <= CIZIM_X &&
       p5.mouseX >= 0 &&
       p5.mouseY <= CIZIM_Y &&
       p5.mouseY >= 0
     ) {
-      //Beyaz alanda cizimin yapilmasi
+      //Cizimin kalinliginin  surekli artip azalmasi
       if (cizimWeight > 10) cizimIncrease = false;
       else if (cizimWeight < 1) cizimIncrease = true;
 

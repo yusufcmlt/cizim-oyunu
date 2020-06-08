@@ -36,17 +36,8 @@
 }
 #katil-linki-random {
   width: 400px;
-  background-color: #593acc;
-  border: none;
-  box-shadow: 2px 2px 0px 0px #30206b;
 }
-#katil-linki-random:hover {
-  background-color: #472f9c;
-}
-#katil-linki-random:active {
-  background-color: #472f9c;
-  box-shadow: inset 2px 2px 0px -0px rgb(16, 11, 34);
-}
+
 #rastgele-button-container {
   display: grid;
   justify-items: center;
@@ -62,7 +53,7 @@
 #random-button-loader {
   border: 6px solid #ffffffcc;
   border-radius: 50%;
-  border-top: 6px solid #5e26e2;
+  border-top: 6px solid #d62828;
   width: 90px;
   height: 90px;
   -webkit-animation: spin 1s linear infinite; /* Safari */
@@ -79,5 +70,22 @@
 @media screen and (max-width: 1400px) {
   #oyunakatil-ic-container {
     transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #oyunakatil-ic-container {
+    transform: scale(0.8);
+    width: 100vw;
+    height: 100vh;
+  }
+  #oyunakatil-logo-container,
+  #oyunakatil-input-container,
+  #katil-linki,
+  #rastgele-select,
+  #oyun_bulunamadi_text,
+  #katil-linki-random,
+  #rastgele-button-container {
+    width: 100vw;
   }
 }

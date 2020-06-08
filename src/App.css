@@ -12,6 +12,8 @@
   transition: 0.5s;
   text-decoration: none;
   box-shadow: -3px 3px 0px 0px rgb(100, 100, 100);
+  display: grid;
+  align-items: center;
 }
 .anasayfaBaslik:hover {
   color: rgb(0, 0, 0);
@@ -19,4 +21,44 @@
   cursor: pointer;
   text-decoration: none;
   box-shadow: 4px 3px 0px 0px rgba(51, 48, 51, 1);
+}
+.btnoyun-renkfirst {
+  background-color: #d62828;
+  border: none;
+  box-shadow: 2px 2px 0px 0px #161b1b;
+  color: white;
+}
+.btnoyun-renkfirst:hover {
+  background-color: #a01c1c;
+}
+.btnoyun-renkfirst:active {
+  background-color: #a01c1c;
+  box-shadow: inset 2px 2px 0px -0px rgb(16, 11, 34);
+}
+
+.btnoyun-renksecond {
+  background-color: #003049;
+  border: none;
+  box-shadow: 2px 2px 0px 0px #161b1b;
+  color: white;
+}
+.btnoyun-renksecond:hover {
+  background-color: #044568;
+}
+.btnoyun-renksecond:active {
+  background-color: #023c5c;
+  box-shadow: inset 2px 2px 0px -0px rgb(16, 11, 34);
+}
+.btnoyun-renkthird {
+  background-color: #5000c0;
+  border: none;
+  box-shadow: 2px 2px 0px 0px #161b1b;
+  color: white;
+}
+.btnoyun-renkthird:hover {
+  background-color: #3f0591;
+}
+.btnoyun-renkthird:active {
+  background-color: #3f0591;
+  box-shadow: inset 2px 2px 0px -0px rgb(16, 11, 34);
 }

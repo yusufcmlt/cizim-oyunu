@@ -28,9 +28,7 @@ export default function OyuncuListesi({
               id="oyunculistesi-oyuncu-container"
               style={{
                 backgroundColor:
-                  siradakiOyuncu === oyuncuID
-                    ? "#23b223"
-                    : "rgba(82, 58, 190, 0.904)",
+                  siradakiOyuncu === oyuncuID ? "#d62828" : "#003049",
               }}
             >
               <div id="oyunculistesi-isim">
