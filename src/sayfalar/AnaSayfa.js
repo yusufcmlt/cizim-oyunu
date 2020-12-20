@@ -24,7 +24,7 @@ export default function AnaSayfa(props) {
   const [isim, setIsim] = useState(`Oyuncu${randomSayiOlustur()}`);
   const [oyuncuID, setID] = useState("");
   const [oyunYonlendir, setYonlendirme] = useState(false);
-  const [nasilOynanirToggle, setNasilToggle] = useState(false);
+  const [nasilOynanirToggle, setNasilToggle] = useState(true);
   const [loaderToggle, setLoaderToggle] = useState(false);
 
   //Uygulamaya giris sonrasi kullanilabilecek oda ve oyuncu id verilerinin olusturulmasi.
@@ -143,6 +143,14 @@ export default function AnaSayfa(props) {
                 }}
               >
                 ?
+              </a>
+              <a
+                className="github-link"
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://github.com/yusufcmlt/cizim-oyunu"
+              >
+                {" "}
               </a>
             </div>
           </div>

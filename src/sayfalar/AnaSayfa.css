@@ -123,6 +123,22 @@
   animation: spin 1s linear infinite;
 }
 
+.github-link {
+  background-image: url("https://user-images.githubusercontent.com/58252790/102718187-de5e2800-42f7-11eb-9b37-b184edb3b74a.png");
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-size: 100%;
+  margin-top: 20px;
+  filter: invert(19%) sepia(90%) saturate(8%) hue-rotate(314deg) brightness(86%)
+    contrast(100%);
+  color: #3b07c8;
+}
+.github-link:hover {
+  filter: invert(14%) sepia(99%) saturate(4246%) hue-rotate(257deg)
+    brightness(73%) contrast(126%);
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
