@@ -6,7 +6,7 @@
  - A multiplayer pictionary game made with React,Socket IO and Firebase.
 	
 
-	>  [cizimoyunu.github.io](cizimoyunu.github.io)
+	>  [cizimoyunu.github.io](https://cizimoyunu.github.io)
 
 
 ![app home page](https://user-images.githubusercontent.com/58252790/102721700-8e8a5b80-430d-11eb-8038-9a5ee81fbf31.png)
