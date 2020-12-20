@@ -57,7 +57,8 @@ export default function LobiSayfasi(props) {
   const SITE_DIL = siteDiliJson[`oyun-dil_${siteDili}`];
 
   //Socket endpoint ve firebase referansi
-  const ENDPOINT = "localhost:5000";
+  const ENDPOINT = process.env.REACT_APP_SOCKET_ENDPOINT;
+  //const ENDPOINT = "localhost:5000";
   const dataRef = firebase.database().ref(`oyunlar`);
 
   useEffect(() => {
